@@ -21,11 +21,13 @@
   },
   "scripts": {
     "build": "tsdown --clean",
+    "type-check": "tsc --noEmit",
     "fmt": "oxfmt",
-    "fmt:check": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@tsconfig/bases": "^1.0.23",
     "oxfmt": "^0.48.0",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3"

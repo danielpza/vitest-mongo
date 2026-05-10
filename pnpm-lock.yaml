@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@tsconfig/bases':
+        specifier: ^1.0.23
+        version: 1.0.23
       oxfmt:
         specifier: ^0.48.0
         version: 0.48.0
@@ -294,6 +297,9 @@ packages:
 
   '@rolldown/pluginutils@1.0.0':
     resolution: {integrity: sha512-aKs/3GSWyV0mrhNmt/96/Z3yczC3yvrzYATCiCXQebBsGyYzjNdUphRVLeJQ67ySKVXRfMxt2lm12pmXvbPFQQ==}
+
+  '@tsconfig/bases@1.0.23':
+    resolution: {integrity: sha512-9DY5I2D/MC7/ug10yRx11pxFSTbAgvrueOkrFqeoJZAUxK68761RLvfUJcTK4HmEtmHblJ3yHGbTlozo690gKA==}
 
   '@tybys/wasm-util@0.10.2':
     resolution: {integrity: sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==}
@@ -648,6 +654,8 @@ snapshots:
     optional: true
 
   '@rolldown/pluginutils@1.0.0': {}
+
+  '@tsconfig/bases@1.0.23': {}
 
   '@tybys/wasm-util@0.10.2':
     dependencies:
