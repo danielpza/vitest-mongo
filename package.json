@@ -1,0 +1,35 @@
+{
+  "name": "vitest-mongo",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "memory",
+    "memory-server",
+    "mongo",
+    "mongodb",
+    "mongodb-memory-server",
+    "server",
+    "test",
+    "vitest"
+  ],
+  "license": "MIT",
+  "author": "Daniel Perez",
+  "type": "module",
+  "scripts": {
+    "build": "rolldown src/index.ts --file dist/index.js",
+    "fmt": "oxfmt .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.48.0",
+    "rolldown": "^1.0.0",
+    "typescript": "^6.0.3"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.0.9",
+      "onFail": "download"
+    }
+  }
+}
