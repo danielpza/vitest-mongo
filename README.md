@@ -45,3 +45,8 @@ import { MongoClient } from "mongodb";
 
 const mongoClient = new MongoClient(MONGO_URI);
 ```
+
+## Roadmap
+
+- [x] [mongodb-memory-server suppport](https://github.com/typegoose/mongodb-memory-server)
+- [ ] [testcontainer mongodb support](https://testcontainers.com/modules/mongodb/?language=nodejs)
