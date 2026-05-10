@@ -1,0 +1,14 @@
+{
+  "name": "plugin",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@tsconfig/bases": "^1.0.23",
+    "mongodb": "^7.2.0",
+    "mongodb-memory-server": "^11.1.0",
+    "vitest": "^4.1.5",
+    "vitest-mongo": "link:.."
+  }
+}
