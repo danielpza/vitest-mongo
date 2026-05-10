@@ -1,6 +1,0 @@
-[tools]
-"npm:corepack" = "0.34.7"
-pnpm = "10.30.2"
-
-[hooks]
-postinstall = ["corepack install"]

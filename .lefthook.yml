@@ -1,0 +1,10 @@
+# https://lefthook.dev/configuration/
+
+pre-commit:
+  parallel: true
+  jobs:
+    - run: mise exec -- node --run fmt:check -- {staged_files}
+      glob: "*"
+      stage_fixed: true
+
+    - run: mise exec -- node --run build
