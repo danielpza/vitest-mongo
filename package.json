@@ -1,0 +1,49 @@
+{
+  "name": "vitest-mongo",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "memory",
+    "memory-server",
+    "mongo",
+    "mongodb",
+    "mongodb-memory-server",
+    "server",
+    "test",
+    "vitest"
+  ],
+  "license": "MIT",
+  "author": "Daniel Perez",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./globalSetup": "./dist/globalSetup.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown --clean",
+    "type-check": "tsc --noEmit",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "test": "vitest run && pnpm -r type-check"
+  },
+  "devDependencies": {
+    "@tsconfig/bases": "^1.0.23",
+    "@types/node": "^25.6.2",
+    "oxfmt": "^0.48.0",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  },
+  "peerDependencies": {
+    "mongodb-memory-server": "*",
+    "vitest": ">4"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.0.9",
+      "onFail": "download"
+    }
+  }
+}

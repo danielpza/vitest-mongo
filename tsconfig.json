@@ -1,0 +1,6 @@
+{
+  "extends": "@tsconfig/bases/node-lts",
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}
