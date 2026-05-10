@@ -1,6 +1,6 @@
 import { defineConfig } from "vitest/config";
-import vitestMms from "vitest-mms";
+import vitestMongo from "vitest-mongo";
 
 export default defineConfig({
-  plugins: [vitestMms()],
+  plugins: [vitestMongo()],
 });

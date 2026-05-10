@@ -1,6 +1,11 @@
 import type { MongoMemoryServer } from "mongodb-memory-server";
 
-import type {} from "./globalSetup.ts";
+declare module "vitest" {
+  // https://vitest.dev/config/provide.html
+  export interface ProvidedContext {
+    MONGO_URI: string;
+  }
+}
 
 type MongoMemoryServerOpts = Parameters<typeof MongoMemoryServer.create>[0];
 
