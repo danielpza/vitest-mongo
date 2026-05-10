@@ -17,7 +17,7 @@ pnpm add -D vitest-mongo mongodb-memory-server
 The main entrypoint is the `vitestMongo` plugin. It extends the vitest context with the `MONGO_URI` value, which you can import with `inject`:
 
 ```js
-// vitest.config.mjs
+// vitest.config.ts
 import { defineConfig } from "vitest/config";
 import vitestMongo from "vitest-mongo";
 
