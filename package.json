@@ -13,7 +13,13 @@
     "vitest"
   ],
   "license": "MIT",
-  "author": "Daniel Perez",
+  "author": {
+    "name": "Daniel Perez",
+    "url": "https://danielpza.xyz"
+  },
+  "repository": {
+    "url": "https://github.com/danielpza/vitest-mongo"
+  },
   "type": "module",
   "exports": {
     ".": "./dist/index.mjs",
