@@ -1,6 +1,9 @@
 allowBuilds:
-  esbuild: set this to true or false
+  cpu-features: false
+  esbuild: false
   mongodb-memory-server: true
+  protobufjs: false
+  ssh2: false
 
 packages:
   - "tests/"

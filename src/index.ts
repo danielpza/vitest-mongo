@@ -13,6 +13,9 @@ declare module "vitest/node" {
   export interface ResolvedConfig {
     vitestMongo?: {
       mongodbMemoryServerOptions?: MongoMemoryServerOpts;
+      testcontainers?: {
+        image?: string;
+      };
     };
   }
 }
