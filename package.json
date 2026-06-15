@@ -36,7 +36,7 @@
     "type-check": "tsc --noEmit",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "test": "node --run build && vitest run && pnpm -r type-check"
+    "test": "node --run build && pnpm -r test && pnpm -r type-check"
   },
   "devDependencies": {
     "@testcontainers/mongodb": "^12.0.2",
