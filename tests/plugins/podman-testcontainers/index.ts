@@ -4,6 +4,7 @@ export default async function podmanTestcontainers() {
   const DOCKER_HOST = `unix://${(await x("podman", ["info", "--format", "{{.Host.RemoteSocket.Path}}"])).stdout.trim()}`;
   const env = {
     DOCKER_HOST,
+    TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE: DOCKER_HOST,
     TESTCONTAINERS_RYUK_DISABLED: true,
   };
 
