@@ -23,7 +23,7 @@ export default function vitestMongo(opts?: { mongodbMemoryServerOptions?: MongoM
     config: () => ({
       vitestMongo: opts,
       test: {
-        globalSetup: [import.meta.resolve("./globalSetup.mjs")],
+        globalSetup: [import.meta.resolve("./runtimes/mongodb-memory-server/globalSetup.mjs")],
       },
     }),
   };

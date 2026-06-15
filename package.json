@@ -26,7 +26,7 @@
   "type": "module",
   "exports": {
     ".": "./dist/index.mjs",
-    "./globalSetup": "./dist/globalSetup.mjs",
+    "./runtimes/mongodb-memory-server/globalSetup": "./dist/runtimes/mongodb-memory-server/globalSetup.mjs",
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -35,7 +35,7 @@
     "type-check": "tsc --noEmit",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "test": "vitest run && pnpm -r type-check"
+    "test": "node --run build && vitest run && pnpm -r type-check"
   },
   "devDependencies": {
     "@tsconfig/bases": "^1.0.23",
