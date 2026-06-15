@@ -26,7 +26,8 @@
   "type": "module",
   "exports": {
     ".": "./dist/index.mjs",
-    "./globalSetup": "./dist/globalSetup.mjs",
+    "./runtimes/mongodb-memory-server/globalSetup": "./dist/runtimes/mongodb-memory-server/globalSetup.mjs",
+    "./runtimes/testcontainers/globalSetup": "./dist/runtimes/testcontainers/globalSetup.mjs",
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -35,19 +36,30 @@
     "type-check": "tsc --noEmit",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "test": "vitest run && pnpm -r type-check"
+    "test": "node --run build && pnpm -r test && pnpm -r type-check"
   },
   "devDependencies": {
+    "@testcontainers/mongodb": "^12.0.2",
     "@tsconfig/bases": "^1.0.23",
     "@types/node": "^25.6.2",
+    "mongodb-memory-server": "*",
     "oxfmt": "^0.48.0",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
   },
   "peerDependencies": {
+    "@testcontainers/mongodb": "*",
     "mongodb-memory-server": "*",
     "vitest": ">3"
+  },
+  "peerDependenciesMeta": {
+    "@testcontainers/mongodb": {
+      "optional": true
+    },
+    "mongodb-memory-server": {
+      "optional": true
+    }
   },
   "devEngines": {
     "packageManager": {

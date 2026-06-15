@@ -7,23 +7,45 @@ declare module "vitest" {
   }
 }
 
-type MongoMemoryServerOpts = Parameters<typeof MongoMemoryServer.create>[0];
-
 declare module "vitest/node" {
   export interface ResolvedConfig {
-    vitestMongo?: {
-      mongodbMemoryServerOptions?: MongoMemoryServerOpts;
-    };
+    vitestMongo?: VitestMongoConfig;
   }
 }
 
-export default function vitestMongo(opts?: { mongodbMemoryServerOptions?: MongoMemoryServerOpts }) {
+type MongoMemoryServerOpts = Parameters<typeof MongoMemoryServer.create>[0];
+
+export interface VitestMongoConfig {
+  /**
+   * Either "mongodb-memory-server" or "testcontainers"
+   * @default "mongodb-memory-server"
+   */
+  runtime?: "mongodb-memory-server" | "testcontainers";
+  mongodbMemoryServerOptions?: MongoMemoryServerOpts;
+  testcontainers?: { image?: string };
+}
+
+export default function vitestMongo(opts?: VitestMongoConfig) {
+  const name = "vitest-mongo";
+
+  if (opts?.runtime === "testcontainers") {
+    return {
+      name,
+      config: () => ({
+        vitestMongo: opts,
+        test: {
+          globalSetup: [import.meta.resolve("./runtimes/testcontainers/globalSetup.mjs")],
+        },
+      }),
+    };
+  }
+
   return {
-    name: "vitest-mongo",
+    name,
     config: () => ({
       vitestMongo: opts,
       test: {
-        globalSetup: [import.meta.resolve("./globalSetup.mjs")],
+        globalSetup: [import.meta.resolve("./runtimes/mongodb-memory-server/globalSetup.mjs")],
       },
     }),
   };

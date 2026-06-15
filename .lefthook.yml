@@ -7,4 +7,7 @@ pre-commit:
       glob: "*"
       stage_fixed: true
 
-    - run: mise exec -- node --run build && mise exec -- node --run test
+    - run: mise exec -- node --run test -- --project=mongodb-memory-server --reporter=minimal
+      root: tests
+
+    - run: mise exec -- node --run type-check
