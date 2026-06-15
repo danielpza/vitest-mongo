@@ -20,6 +20,9 @@
   "repository": {
     "url": "https://github.com/danielpza/vitest-mongo"
   },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "exports": {
     ".": "./dist/index.mjs",
@@ -27,6 +30,7 @@
     "./package.json": "./package.json"
   },
   "scripts": {
+    "prepare": "node --run build",
     "build": "tsdown --clean",
     "type-check": "tsc --noEmit",
     "fmt": "oxfmt",
