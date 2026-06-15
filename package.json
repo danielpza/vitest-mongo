@@ -37,7 +37,7 @@
   },
   "peerDependencies": {
     "mongodb-memory-server": "*",
-    "vitest": ">4"
+    "vitest": ">3"
   },
   "devEngines": {
     "packageManager": {
