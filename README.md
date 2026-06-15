@@ -4,7 +4,7 @@
 
 Minimal [vitest](https://vitest.dev/) plugin for mongodb.
 
-- types built-in
+- typescript support
 - small
 - multiple mongodb runtimes support
 
