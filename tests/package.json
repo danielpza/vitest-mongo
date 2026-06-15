@@ -10,7 +10,6 @@
     "@tsconfig/bases": "^1.0.23",
     "mongodb": "^7.2.0",
     "mongodb-memory-server": "^11.1.0",
-    "tinyexec": "^1.2.4",
     "vitest": "^4.1.5",
     "vitest-mongo": "link:.."
   }
