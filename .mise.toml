@@ -3,6 +3,10 @@ lefthook = "latest"
 node = "22.22.2"
 "npm:corepack" = "0.34.7"
 pnpm = "10.30.2"
+podman = "latest"
+
+# [env]
+# _.source = { path = "./scripts/podman-socket.sh", tools = true }
 
 [hooks]
 postinstall = ["corepack install", "lefthook install"]
