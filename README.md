@@ -50,3 +50,4 @@ const mongoClient = new MongoClient(MONGO_URI);
 
 - [x] [mongodb-memory-server suppport](https://github.com/typegoose/mongodb-memory-server)
 - [ ] [testcontainer mongodb support](https://testcontainers.com/modules/mongodb/?language=nodejs)
+- [ ] Add examples how to integrate with mongodb/mongoose
