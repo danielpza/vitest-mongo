@@ -9,3 +9,5 @@ pre-commit:
 
     - run: mise exec -- node --run test -- --project=mongodb-memory-server --reporter=minimal
       root: tests
+
+    - run: mise exec -- node --run type-check

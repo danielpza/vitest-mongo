@@ -1,5 +1,4 @@
 import type { MongoMemoryServer } from "mongodb-memory-server";
-import type { UserConfig } from "vitest/config";
 
 declare module "vitest" {
   // https://vitest.dev/config/provide.html
